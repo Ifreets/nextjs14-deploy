@@ -6,16 +6,16 @@ import { Input } from "@/components/ui/input";
 import { InputCustom } from "@/components/ui/inputCustom";
 import { Label } from "@/components/ui/label";
 import Link from "next/link";
-import { useState } from "react";
 import Validation from "./Validation";
 import { emailLogin } from "./actions";
+import { useState } from "react";
 
 export default function LoginForm() {
-  const [value, setValue] = useState({
+  const [value, setValue] = useState<any>({
     email: "",
     password: "",
   });
-  const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState<any>({});
   const [signupSuccess, setSignupSuccess] = useState(false);
 
   const handleLogin = (e: any) => {
@@ -24,10 +24,10 @@ export default function LoginForm() {
     const checkValidation = Validation(value);
     const formData = new FormData();
     if (Object.keys(checkValidation).length === 0) {
-      console.log("no error");
-      for (let key in value) {
-        formData.append(key, value[key]);
-      }
+      // console.log("no error");
+      // for (let key in value) {
+      //   formData.append(key, value[key]);
+      // }
       emailLogin(formData);
     }
   };

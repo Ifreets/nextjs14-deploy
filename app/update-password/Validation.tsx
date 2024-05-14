@@ -2,7 +2,7 @@ export default function Validation(value: {
   password: string;
   confirmPassword: string;
 }) {
-  let error = {};
+  let error = {} as any;
   if (!value.password) {
     error.password = "Không được để trống trường này";
   } else if (value.password.length < 1 || value.password.length > 16) {

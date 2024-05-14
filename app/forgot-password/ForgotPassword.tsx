@@ -3,17 +3,17 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { InputCustomVerify } from "@/components/ui/inputCustomVerify";
-import { useState } from "react";
-import { navigate } from "../login/actions";
 import Validation from "./Validation";
+import { navigate } from "../login/actions";
+import { useState } from "react";
 
 export default function ForgotPasswordForm() {
-  const [value, setValue] = useState({
+  const [value, setValue] = useState<any>({
     username: "",
     verifyCode: "",
   });
 
-  const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState<any>({});
   const handleForgot = (e: any) => {
     setErrors(Validation(value));
 
@@ -21,9 +21,10 @@ export default function ForgotPasswordForm() {
 
     const formData = new FormData();
     if (Object.keys(checkValidation).length === 0) {
-      for (let key in value) {
-        formData.append(key, value[key]);
-      }
+      // for (let key in value) {
+      //   //@ts-ignore
+      //   formData.append(key, value[key]);
+      // }
       navigate("/update-password");
     }
   };

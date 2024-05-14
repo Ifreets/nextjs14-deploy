@@ -6,17 +6,17 @@ import { InputCustom } from "@/components/ui/inputCustom";
 import { InputCustomVerify } from "@/components/ui/inputCustomVerify";
 import ModalContent from "@/components/ui/ModalContent";
 import ModalMessage from "@/components/ui/ModalMessage";
-import { useState } from "react";
 import Validation from "./Validation";
+import { useState } from "react";
 
 export default function Signup() {
-  const [value, setValue] = useState({
+  const [value, setValue] = useState<any>({
     username: "",
     phone: "",
     verifyCode: "",
     password: "",
   });
-  const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState<any>({});
   const [signupSuccess, setSignupSuccess] = useState(false);
   const [openToS, setOpenToS] = useState(false);
   const [openPrivacy, setOpenPrivacy] = useState(false);

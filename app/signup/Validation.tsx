@@ -4,7 +4,7 @@ export default function Validation(value: {
   verifyCode: string;
   password: string;
 }) {
-  let error = {};
+  let error = {} as any;
   if (!value.username) {
     error.username = "Không được để trống trường này";
   } else if (value.username.length < 4 || value.username.length > 80) {

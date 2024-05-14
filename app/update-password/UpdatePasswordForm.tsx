@@ -3,8 +3,8 @@
 import { Button } from "@/components/ui/button";
 import { InputCustom } from "@/components/ui/inputCustom";
 import ModalMessage from "@/components/ui/ModalMessage";
-import { useState } from "react";
 import Validation from "./Validation";
+import { useState } from "react";
 
 function UpdatePasswordForm() {
   const [value, setValue] = useState({
@@ -12,16 +12,16 @@ function UpdatePasswordForm() {
     confirmPassword: "",
   });
   const [updatePasswordSuccess, setUpdatePasswordSuccess] = useState(false);
-  const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState<any>({});
   const handleForgot = (e: any) => {
     setErrors(Validation(value));
     const checkValidation = Validation(value);
     const formData = new FormData();
     if (Object.keys(checkValidation).length === 0) {
       console.log("no error");
-      for (let key in value) {
-        formData.append(key, value[key]);
-      }
+      // for (let key in value) {
+      //   formData.append(key, value[key]);
+      // }
       setUpdatePasswordSuccess(true);
     }
   };

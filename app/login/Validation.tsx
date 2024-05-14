@@ -1,5 +1,5 @@
 export default function Validation(value: { email: string; password: string }) {
-  let error = {};
+  let error = {} as any;
   if (!value.email) {
     error.email = "Không được để trống trường này";
   } else if (value.email.length < 4 || value.email.length > 80) {

@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/card";
+import { Label } from "@/components/ui/label";
 import { OAuthButtons } from "./oauthSignin";
 import { createClient } from "@/utils/supabase/server";
 import { redirect } from "next/navigation";
@@ -28,8 +29,8 @@ export default async function Login({
         </CardHeader>
         <CardContent className="flex flex-col gap-4">
           <LoginForm />
-          <div className="border-t"></div>
-          <Label className="text-sm text-center">Hoặc đăng nhập bằng</Label> */}
+          <div className="border-t"></div> */}
+        <Label className="text-sm text-center">Hoặc đăng nhập bằng</Label>
         <OAuthButtons />
         {/* <div className="border-t"></div>
           <div className="text-center text-sm">

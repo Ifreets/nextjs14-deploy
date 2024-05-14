@@ -1,8 +1,8 @@
 import { Card } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
-import { OAuthButtons } from "./oauthSignin";
 import { createClient } from "@/utils/supabase/server";
 import { redirect } from "next/navigation";
+import { OAuthButtons } from "./oauthSignin";
 
 export default async function Login({
   searchParams,
@@ -32,6 +32,7 @@ export default async function Login({
           <div className="border-t"></div> */}
         <Label className="text-sm text-center">Hoặc đăng nhập bằng</Label>
         <OAuthButtons />
+        <Label className="text-sm text-center">Hoặc đăng nhập bằng</Label>
         {/* <div className="border-t"></div>
           <div className="text-center text-sm">
             Bạn chưa có tài khoản?{" "}

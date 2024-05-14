@@ -1,9 +1,9 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Provider } from "@supabase/supabase-js";
 import { FaFacebook } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
+import { Provider } from "@supabase/supabase-js";
 import { oAuthSignIn } from "./actions";
 
 type OAuthProvider = {
@@ -33,18 +33,6 @@ export function OAuthButtons() {
 
   return (
     <>
-      {/* {oAuthProviders.map((provider) => (
-        <Button
-          className="flex items-center justify-center gap-2"
-          variant="outline"
-          onClick={async () => {
-            await oAuthSignIn(provider.name);
-          }}
-        >
-          {provider.icon}
-          {provider.displayName}
-        </Button>
-      ))} */}
       <div className="flex justify-between gap-2">
         <Button
           className="flex-1 items-center justify-center gap-2"

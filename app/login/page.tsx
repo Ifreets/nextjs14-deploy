@@ -32,7 +32,6 @@ export default async function Login({
           <div className="border-t"></div> */}
         <Label className="text-sm text-center">Hoặc đăng nhập bằng</Label>
         <OAuthButtons />
-        <Label className="text-sm text-center">Hoặc đăng nhập bằng</Label>
         {/* <div className="border-t"></div>
           <div className="text-center text-sm">
             Bạn chưa có tài khoản?{" "}
